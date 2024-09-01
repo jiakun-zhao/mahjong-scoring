@@ -1,0 +1,7 @@
+<view class='container'>
+  <button class="avatar-container" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatar}}" />
+  </button>
+  <input class="name" type="nickname" model:value="{{name}}" placeholder="请输入昵称" />
+  <button class="submit" hover-class="submit-hover" bind:tap="onSubmit">保存</button>
+</view>

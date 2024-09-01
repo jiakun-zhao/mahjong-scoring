@@ -1,0 +1,48 @@
+@import './dark.scss';
+
+page {
+  --btn-rounded: 16rpx;
+  --btn-primary-color: #954;
+
+  --btn-primary-background-color: rgba(153, 85, 68, .1);
+  --btn-primary-background-color-hover: rgba(153, 85, 68, .2);
+  --btn-primary-border-color: rgba(153, 85, 68, .3);
+  --btn-secondary-color: black;
+  --btn-secondary-background-color: rgba(180, 180, 180, .1);
+  --btn-secondary-background-color-hover: rgba(180, 180, 180, .2);
+  --btn-secondary-border-color: rgba(180, 180, 180, .3);
+  --btn-height: 40px;
+  --btn-padding: 8px;
+
+  background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    --btn-primary-background-color: rgba(153, 85, 68, .2);
+    --btn-primary-background-color-hover: rgba(153, 85, 68, .3);
+    --btn-primary-border-color: rgba(153, 85, 68, .4);
+    --btn-secondary-color: white;
+    --btn-secondary-background-color: rgba(120, 120, 120, .2);
+    --btn-secondary-background-color-hover: rgba(120, 120, 120, .3);
+    --btn-secondary-border-color: rgba(120, 120, 120, .4);
+    --btn-height: 40px;
+    --btn-padding: 8px;
+
+    background-color: black;
+  }
+}
+
+.btn-clear {
+  height: 40px;
+  padding: 8px;
+}
+
+.primary-btn {
+  color: #954;
+  background-color: rgba(153, 85, 68, .2);
+  border: 1px solid rgba(153, 85, 68, .4);
+  border-radius: var(--btn-rounded);
+}
+
+.primary-btn-hover {
+  background-color: rgba(153, 85, 68, .3);
+}

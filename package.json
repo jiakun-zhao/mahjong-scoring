@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.12.3",
+    "wx-server-sdk": "^3.0.1"
+  }
+}

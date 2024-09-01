@@ -1,0 +1,11 @@
+<view class='list'>
+  <view class='no-history'>没有对局记录...</view>
+</view>
+
+<view class="btns">
+  <button class="btn edit" hover-class="edit-hover" bind:tap="onEdit">
+    <image class="btn avatar" src="{{avatar}}" />
+  </button>
+  <button class="btn toy" hover-class="toy-hover">☝🏻</button>
+  <button class="btn start" hover-class="start-hover">创建对局</button>
+</view>

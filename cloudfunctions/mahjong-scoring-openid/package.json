@@ -1,0 +1,6 @@
+{
+  "name": "mahjong-scoring-openid",
+  "dependencies": {
+    "wx-server-sdk": "~2.4.0"
+  }
+}
