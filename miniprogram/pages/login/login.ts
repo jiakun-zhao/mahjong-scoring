@@ -9,7 +9,7 @@ interface LoginPageData {
 interface LoginPageFunctions {
   onSubmit: () => Promise<void>
   onChooseAvatar: (e: WechatMiniprogram.CustomEvent<{ avatarUrl: string }>) => void
-  uploadAvatarToCloud: (avatar: string) => Promise<string>
+  uploadAvatarToCloud: (avatar: string, openid: string) => Promise<string>
   getDatabaseId: () => Promise<string | undefined>
 }
 
@@ -50,12 +50,13 @@ Page<LoginPageData, LoginPageFunctions>({
     }
 
     try {
-      if (!this.data.openid)
+      const openid = this.data.openid
+      if (!openid)
         throw Error()
 
       wx.showToast({ title: '上传中...', icon: 'loading' })
 
-      const fileId = await this.uploadAvatarToCloud(avatar)
+      const fileId = await this.uploadAvatarToCloud(avatar, openid)
       const dbId = await this.getDatabaseId()
       const collection = wx.cloud.database().collection("USER")
       const data = { name, avatar: fileId }
@@ -72,10 +73,9 @@ Page<LoginPageData, LoginPageFunctions>({
       wx.showToast({ title: "保存失败", icon: 'error' })
     }
   },
-  async uploadAvatarToCloud(avatar: string) {
-    const name = avatar.slice(avatar.lastIndexOf('/') + 1)
+  async uploadAvatarToCloud(avatar: string, openid: string) {
     const { fileID } = await wx.cloud.uploadFile({
-      cloudPath: 'avatar/' + name,
+      cloudPath: 'avatar/' + openid,
       filePath: avatar
     })
     return fileID

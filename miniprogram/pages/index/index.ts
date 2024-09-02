@@ -11,6 +11,7 @@ interface IndexPageFunctions {
   loadOpenId: () => Promise<void>
   loadInfo: () => Promise<void>
   onEdit: () => void
+  onGameCreater: () => void
 }
 
 Page<IndexPageData, IndexPageFunctions>({
@@ -53,5 +54,10 @@ Page<IndexPageData, IndexPageFunctions>({
   },
   onEdit() {
     wx.navigateTo({ url: '../login/login?openid=' + this.data.openid })
+  },
+  onGameCreater() {
+    wx.navigateTo({
+      url: '../room/room?id=983e93c466d55319008176200c6f3e6e'
+    })
   }
 })

@@ -1,5 +1,0 @@
-@mixin runInDark {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}

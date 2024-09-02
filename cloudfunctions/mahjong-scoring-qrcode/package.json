@@ -1,0 +1,6 @@
+{
+  "name": "mahjong-scoring-qrcode",
+  "dependencies": {
+    "wx-server-sdk": "~2.4.0"
+  }
+}

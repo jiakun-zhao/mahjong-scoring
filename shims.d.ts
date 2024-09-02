@@ -1,5 +1,7 @@
 /// <reference types="miniprogram-api-typings" />
 
 interface IAppOption {
-  globalData: { }
+  globalData: {
+    openid: string | null
+  }
 }

@@ -1,0 +1,22 @@
+<template name="header">
+  <view class='header'>
+    <image class='avatar' src="{{avatar}}"></image>
+    <view class='text value {{value < 0 ? "green" : "red"}}'>{{value}}</view>
+  </view>
+</template>
+
+<template name="item">
+  <view class='item'>
+    <view class='text'>第 {{index+1}} 局</view>
+    <!-- <view class='text date'>10/10 12:12</view> -->
+  </view>
+  <view class='item text value {{item.value < 0 ? "green" : "red"}}' wx:for='{{data}}' wx:key='avatar'>{{item.value}}</view>
+</template>
+
+<view class="container">
+  <view class='current'>
+    <template is="header" data="{{...users[0]}}"></template>
+  </view>
+  <template is="header" wx:for="{{users}}" wx:key="openid" data="{{...item}}"></template>
+  <template is="item" wx:for="{{games}}" wx:key="createTime" data="{{...item, index}}"></template>
+</view>
