@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login",
+    "pages/settings/settings",
     "pages/room/room",
-    "pages/re/index/index"
+    "pages/room/create/create"
   ],
   "window": {
-    "navigationBarBackgroundColor": "@navBgColor",
-    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundColor": "@bgColor",
+    "navigationBarTextStyle": "@textNavBar",
+    "navigationBarBackgroundColor": "@bgNavBar",
     "navigationBarTitleText": "抓四只白板"
   },
   "style": "v2",

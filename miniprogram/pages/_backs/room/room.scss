@@ -1,0 +1,69 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding: 0 48rpx;
+  padding-bottom: calc(2rem + constant(safe-area-inset-bottom));
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  align-items: center;
+  justify-items: center;
+}
+
+.current {
+  padding: 18rpx 24rpx;
+  border-radius: 18rpx;
+  background-color: rgba($color: #000000, $alpha: .04);
+
+  .header {
+    margin: 0;
+  }
+}
+
+.header {
+  margin: 64rpx 0;
+
+  .avatar {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 18rpx;
+    margin-bottom: 8rpx;
+  }
+}
+
+.item {
+  margin: 18rpx 0;
+
+  .text:first-of-type {
+    opacity: .4;
+  }
+}
+
+.text {
+  text-align: center;
+  font-size: 0.875rem;
+
+  &.date {
+    opacity: .2;
+    font-size: 0.75rem;
+    margin-top: 8rpx;
+  }
+
+  &.value {
+    border-radius: 18rpx;
+    border: 1px solid;
+    padding: 6rpx 10rpx;
+    font-size: 0.75rem;
+    font-family: Geist Mono, IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+
+    &.green {
+      color: rgba(74, 222, 128, 1);
+      background-color: rgba(74, 222, 128, .1);
+      border-color: rgba(74, 222, 128, .2);
+    }
+
+    &.red {
+      color: rgba(248, 113, 113, 1);
+      background-color: rgba(248, 113, 113, .1);
+      border-color: rgba(248, 113, 113, .2);
+    }
+  }
+}

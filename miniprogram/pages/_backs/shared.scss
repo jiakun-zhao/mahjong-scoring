@@ -1,12 +1,7 @@
-@import './assets/fonts.scss';
-@import './assets/unocss.scss';
-
 page {
-  --text-sm: 0.875rem;
-  --border-primary: rgba(0, 0, 0, 0.2);
-
-  --btn-rounded: 8px;
+  --btn-rounded: 16rpx;
   --btn-primary-color: #954;
+
   --btn-primary-background-color: rgba(153, 85, 68, 0.1);
   --btn-primary-background-color-hover: rgba(153, 85, 68, 0.2);
   --btn-primary-border-color: rgba(153, 85, 68, 0.3);
@@ -14,14 +9,15 @@ page {
   --btn-secondary-background-color: rgba(180, 180, 180, 0.1);
   --btn-secondary-background-color-hover: rgba(180, 180, 180, 0.2);
   --btn-secondary-border-color: rgba(180, 180, 180, 0.3);
+  --btn-height: 40px;
+  --btn-padding: 8px;
 
-  color: #000;
-  background-color: #fff;
-  font-family: $font-sans;
+  background-color: white;
+  font-family: Geist Sans, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Arial, Noto Sans, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji';
 
   @media (prefers-color-scheme: dark) {
-    --border-primary: rgba(255, 255, 255, 0.2);
-
     --btn-primary-background-color: rgba(153, 85, 68, 0.2);
     --btn-primary-background-color-hover: rgba(153, 85, 68, 0.3);
     --btn-primary-border-color: rgba(153, 85, 68, 0.4);
@@ -29,12 +25,25 @@ page {
     --btn-secondary-background-color: rgba(120, 120, 120, 0.2);
     --btn-secondary-background-color-hover: rgba(120, 120, 120, 0.3);
     --btn-secondary-border-color: rgba(120, 120, 120, 0.4);
+    --btn-height: 40px;
+    --btn-padding: 8px;
 
-    color: #fff;
-    background-color: #000;
+    background-color: black;
   }
 }
 
-.font-mono {
-  font-family: $font-mono;
+.btn-clear {
+  height: 40px;
+  padding: 8px;
+}
+
+.primary-btn {
+  color: #954;
+  background-color: rgba(153, 85, 68, 0.2);
+  border: 1px solid rgba(153, 85, 68, 0.4);
+  border-radius: var(--btn-rounded);
+}
+
+.primary-btn-hover {
+  background-color: rgba(153, 85, 68, 0.3);
 }

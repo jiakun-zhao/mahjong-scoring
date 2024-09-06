@@ -1,0 +1,13 @@
+<view class="container">
+  <image class="avatar" mode="aspectFill" src="{{avatarUrl}}" bind:error="onAvatarError" bind:load="onAvatarLoad" />
+  <view>
+    <view wx:if="{{isAvatarError}}">
+      <button class="avatar-choose" hover-class="avatar-choose-hover" open-type="chooseAvatar" bind:chooseavatar="onAvatarChoose">
+        请先设置头像
+      </button>
+    </view>
+    <view wx:else>
+      <image class="qrcode" src="/assets/qrcode.jpg" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<image src="{{avatarUrl}}" />
+<button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">选择头像</button>
+<button bind:tap="onSave">保存</button>
