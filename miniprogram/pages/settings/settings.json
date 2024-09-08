@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "设置"
+  "navigationStyle": "custom",
+  "disableScroll": true
 }

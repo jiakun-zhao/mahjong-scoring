@@ -7,22 +7,29 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/re/index/index",
-          "pathName": "pages/re/index/index",
+          "name": "tests",
+          "pathName": "pages/tests/tests",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "pages/room/room",
-          "pathName": "pages/room/room",
-          "query": "id=983e93c466d55319008176200c6f3e6e",
+          "name": "Settings",
+          "pathName": "pages/settings/settings",
+          "query": "",
           "launchMode": "default",
           "scene": null,
           "partialCompile": {
             "enabled": true,
             "pages": []
           }
+        },
+        {
+          "name": "pages/re/index/index",
+          "pathName": "pages/re/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "Login",

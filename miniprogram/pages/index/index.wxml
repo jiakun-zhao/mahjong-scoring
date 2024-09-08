@@ -1,2 +1,8 @@
-<button bind:tap="onRoomCreate">创建房间</button>
-<button bind:tap="onCloudFn">onCloudFn</button>
+<view class="container">
+  <button class="avatar-choose" open-type="chooseAvatar" bind:chooseavatar="onAvatarChoose">
+    <image class="{{isAvatarLoaded ? 'avatar' : 'avatar loading'}}" src="{{avatarUrl}}" mode="aspectFit" bind:error="onAvatarError" bind:load="onAvatarLoaded"/>
+  </button>
+  <button class="button-primary" hover-class="button-primary-hover" bind:tap="onRoomCreate">创建房间</button>
+  <button class="button-secondary" hover-class="button-secondary-hover" bind:tap="onHistoryOpen">历史记录</button>
+  <image class="logo" src="/assets/logo.png" mode="aspectFit" />
+</view>

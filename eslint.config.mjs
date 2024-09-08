@@ -8,12 +8,13 @@ export default antfu({
       'ts/ban-ts-comment': 'off',
       'ts/no-unused-expressions': 'off',
       'unused-imports/no-unused-imports': 'warn',
+      'prefer-promise-reject-errors': 'off',
     },
   },
   formatters: {
     css: 'prettier',
   },
   ignores: [
-    './miniprogram/assets/unocss.scss',
+    './miniprogram/assets/uno.css',
   ],
 })

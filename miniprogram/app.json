@@ -3,17 +3,16 @@
     "pages/index/index",
     "pages/settings/settings",
     "pages/room/room",
-    "pages/room/create/create"
+    "pages/room/create/create",
+    "pages/tests/tests"
   ],
   "window": {
-    "backgroundColor": "@bgColor",
-    "navigationBarTextStyle": "@textNavBar",
-    "navigationBarBackgroundColor": "@bgNavBar",
-    "navigationBarTitleText": "抓四只白板"
+    "navigationBarTitleText": "抓四只白板",
+    "backgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",
-  "darkmode": true,
-  "themeLocation": "theme.json",
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,

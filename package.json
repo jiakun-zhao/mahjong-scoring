@@ -1,16 +1,12 @@
 {
   "type": "module",
-  "scripts": {
-    "dev": "unocss \"miniprogram/**/*.{wxml|scss}\" \"miniprogram/**/!unocss.scss\" -o \"miniprogram/assets/unocss.scss\" -w"
-  },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.3.2",
-    "@unocss/cli": "^0.62.3",
-    "eslint": "^9.9.1",
+    "@antfu/eslint-config": "^3.4.1",
+    "@types/node": "^22.5.4",
+    "eslint": "^9.10.0",
     "eslint-plugin-format": "^0.1.2",
     "miniprogram-api-typings": "^3.12.3",
     "typescript": "^5.5.4",
-    "unocss": "^0.62.3",
     "wx-server-sdk": "^3.0.1"
   }
 }

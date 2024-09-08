@@ -1,3 +1,6 @@
-<image src="{{avatarUrl}}" />
-<button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">选择头像</button>
-<button bind:tap="onSave">保存</button>
+<view class='container'>
+  <button class="avatar-choose" hover-class="avatar-choose-hover" open-type="chooseAvatar" bind:chooseavatar="onAvatarChoose">
+    <image src="{{avatarUrl}}" mode="aspectFill" />
+  </button>
+  <button class="button-primary" hover-class="button-primary-hover">设置头像</button>
+</view>

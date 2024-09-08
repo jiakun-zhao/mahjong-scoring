@@ -1,0 +1,6 @@
+<view class='rounded' />
+
+<button open-type="chooseAvatar" bind:chooseavatar="onAvatarChoose">onAvatarChoose</button>
+<button bind:tap="uploadAvatarToCloud">uploadAvatarToCloud</button>
+<button bind:tap="readAvatarFromDisk">readAvatarFromDisk</button>
+<button bind:tap="getImageInfo">getImageInfo</button>

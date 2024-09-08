@@ -7,7 +7,7 @@
       </button>
     </view>
     <view wx:else>
-      <image class="qrcode" src="/assets/qrcode.jpg" />
+      <image class="qrcode" src="/assets/tmp/qrcode.jpg" />
     </view>
   </view>
 </view>
