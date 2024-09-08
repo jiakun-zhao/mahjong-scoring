@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/room/room"
+    "pages/room/room",
+    "pages/history/history",
+    "pages/scoring/scoring"
   ],
   "window": {
     "navigationBarTitleText": "抓四只白板",

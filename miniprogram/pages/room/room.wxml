@@ -1,2 +1,6 @@
-<!--pages/room/room.wxml-->
-<text>pages/room/room.wxml</text>
+<view class="waiting">
+  <image class="qrcode" src="{{qrcode}}" mode="aspectFill" />
+  <view class="users">
+    <image wx:for="{{users}}" wx:key="index" class="avatar {{item === '' ? 'loading' : ''}}" mode="aspectFill" src="{{item}}" />
+  </view>
+</view>

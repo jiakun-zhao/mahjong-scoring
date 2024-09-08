@@ -7,62 +7,10 @@
     "miniprogram": {
       "list": [
         {
-          "name": "tests",
-          "pathName": "pages/tests/tests",
-          "query": "",
+          "name": "pages/scoring/scoring",
+          "pathName": "pages/scoring/scoring",
+          "query": "scene=983e93c466d55319008176200c6f3e6e",
           "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "Settings",
-          "pathName": "pages/settings/settings",
-          "query": "",
-          "launchMode": "default",
-          "scene": null,
-          "partialCompile": {
-            "enabled": true,
-            "pages": []
-          }
-        },
-        {
-          "name": "pages/re/index/index",
-          "pathName": "pages/re/index/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "Login",
-          "pathName": "pages/login/login",
-          "query": "openid=o51pv7STQQdZGNoZR0joHfTvfKqs",
-          "launchMode": "default",
-          "scene": null,
-          "partialCompile": {
-            "enabled": true,
-            "pages": []
-          }
-        },
-        {
-          "name": "首页-快速开始",
-          "pathName": "pages/index/index",
-          "query": ""
-        },
-        {
-          "name": "商品列表",
-          "pathName": "pages/goods-list/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "云开发示例",
-          "pathName": "pages/examples/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "个人中心",
-          "pathName": "pages/user-center/index",
-          "query": "",
           "scene": null
         }
       ]

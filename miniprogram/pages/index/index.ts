@@ -4,40 +4,28 @@ Page({
   data: {
     avatarUrl: '',
     isAvatarLoaded: false,
+    scene: null,
   },
   async onLoad(query) {
     const openid = await getOpenid()
     this.setData({
+      // @ts-expect-error
+      scene: query.scene,
       avatarUrl: `cloud://cloud-dev-2g6a41d99ffcb37a.636c-cloud-dev-2g6a41d99ffcb37a-1329167428/avatar/${openid}`,
     })
-    if (query.scene) {
-      // eslint-disable-next-line no-console
-      console.log(query.scene)
-    }
+    wx.showLoading({ title: '加载中', mask: true })
   },
-  // async onCloudFn() {
-  //   const res = await wx.cloud.callFunction({
-  //     name: 'mahjong-scoring-qrcode',
-  //     data: { id: '983e93c466d55319008176200c6f3e6e', envVersion: 'develop' },
-  //   })
-  //   if (res.errMsg.endsWith(':ok')) {
-  //     console.log(res.result)
-  //   } else {
-  //     console.error(res)
-  //   }
-  // },
-  async onRoomCreate() {
+  async onRoomRoute() {
     if (!this.data.isAvatarLoaded) {
       wx.showToast({ title: '请先加载头像', icon: 'error' })
       return
     }
-    // wx.navigateTo({ url: '/pages/room/create/create' })
-    // eslint-disable-next-line no-console
-    console.log('onRoomCreate')
+    this.data.scene
+      ? wx.navigateTo({ url: `/pages/room/room?scene=${this.data.scene}` })
+      : wx.navigateTo({ url: '/pages/room/room' })
   },
   async onHistoryOpen() {
-    // eslint-disable-next-line no-console
-    console.log('onHistoryOpen')
+    wx.navigateTo({ url: '/pages/history/history' })
   },
   async onAvatarChoose(e: WechatMiniprogram.CustomEvent<{ avatarUrl: string }>) {
     try {
@@ -55,9 +43,11 @@ Page({
       : wx.showToast({ title: '上传失败', icon: 'error' })
   },
   async onAvatarLoaded() {
+    wx.hideLoading()
     this.setData({ isAvatarLoaded: true })
   },
   async onAvatarError() {
+    wx.hideLoading()
     this.setData({ isAvatarLoaded: false })
   },
 })
