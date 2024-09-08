@@ -1,3 +1,0 @@
-<view wx:if="{{isAvatarError}}"></view>
-<view wx:else>Not error</view>
-<image src="{{avatar}}" bind:error="onAvatarError" />

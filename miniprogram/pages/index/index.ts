@@ -11,6 +11,7 @@ Page({
       avatarUrl: `cloud://cloud-dev-2g6a41d99ffcb37a.636c-cloud-dev-2g6a41d99ffcb37a-1329167428/avatar/${openid}`,
     })
     if (query.scene) {
+      // eslint-disable-next-line no-console
       console.log(query.scene)
     }
   },
@@ -31,9 +32,11 @@ Page({
       return
     }
     // wx.navigateTo({ url: '/pages/room/create/create' })
+    // eslint-disable-next-line no-console
     console.log('onRoomCreate')
   },
   async onHistoryOpen() {
+    // eslint-disable-next-line no-console
     console.log('onHistoryOpen')
   },
   async onAvatarChoose(e: WechatMiniprogram.CustomEvent<{ avatarUrl: string }>) {

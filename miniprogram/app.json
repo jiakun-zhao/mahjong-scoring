@@ -1,10 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/settings/settings",
-    "pages/room/room",
-    "pages/room/create/create",
-    "pages/tests/tests"
+    "pages/room/room"
   ],
   "window": {
     "navigationBarTitleText": "抓四只白板",
