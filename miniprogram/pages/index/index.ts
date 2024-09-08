@@ -21,8 +21,8 @@ Page({
       return
     }
     this.data.scene
-      ? wx.navigateTo({ url: `/pages/room/room?scene=${this.data.scene}` })
-      : wx.navigateTo({ url: '/pages/room/room' })
+      ? wx.redirectTo({ url: `/pages/room/room?scene=${this.data.scene}` })
+      : wx.redirectTo({ url: '/pages/room/room' })
   },
   async onHistoryOpen() {
     wx.navigateTo({ url: '/pages/history/history' })
