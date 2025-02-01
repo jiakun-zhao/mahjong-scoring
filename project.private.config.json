@@ -1,15 +1,15 @@
 {
   "setting": {
     "compileHotReLoad": true,
-    "urlCheck": true
+    "urlCheck": false
   },
   "condition": {
     "miniprogram": {
       "list": [
         {
-          "name": "pages/scoring/scoring",
-          "pathName": "pages/scoring/scoring",
-          "query": "scene=983e93c466d55319008176200c6f3e6e",
+          "name": "Console",
+          "pathName": "pages/console/console",
+          "query": "",
           "launchMode": "default",
           "scene": null
         }
@@ -17,5 +17,6 @@
     }
   },
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "projectname": "mahjong-scoring"
+  "projectname": "mahjong-scoring",
+  "libVersion": "3.6.6"
 }

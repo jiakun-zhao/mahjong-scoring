@@ -1,12 +1,12 @@
 {
   "type": "module",
   "devDependencies": {
-    "@antfu/eslint-config": "^3.4.1",
-    "@types/node": "^22.5.4",
-    "eslint": "^9.10.0",
-    "eslint-plugin-format": "^0.1.2",
-    "miniprogram-api-typings": "^3.12.3",
-    "typescript": "^5.5.4",
+    "@antfu/eslint-config": "^4.1.0",
+    "@types/node": "^22.13.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-format": "^1.0.1",
+    "miniprogram-api-typings": "^4.0.4",
+    "typescript": "^5.7.3",
     "wx-server-sdk": "^3.0.1"
   }
 }

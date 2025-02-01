@@ -1,6 +1,2 @@
-<view class="waiting">
-  <image class="qrcode" src="{{qrcode}}" mode="aspectFill" />
-  <view class="users">
-    <image wx:for="{{users}}" wx:key="index" class="avatar {{item === '' ? 'loading' : ''}}" mode="aspectFill" src="{{item}}" />
-  </view>
-</view>
+<image class="qrcode" src="{{qrcode}}" mode="aspectFill" />
+<image wx:for="{{info.users}}" wx:key="index" mode="aspectFill" src="https://blob.zhaojiakun.com/program/mahjong-scoring/avatar-{{item}}" />

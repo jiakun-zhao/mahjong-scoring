@@ -3,19 +3,16 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 
 exports.main = async (event) => {
-  const { id, envVersion } = event
   try {
-    const { buffer } = await cloud.openapi.wxacode.getUnlimited({
+    const { buffer: fileContent } = await cloud.openapi.wxacode.getUnlimited({
       page: 'pages/index/index',
-      scene: id,
+      scene: event.scene,
       checkPath: false,
-      envVersion,
+      envVersion: event.envVersion,
     })
-    const { fileID } = await cloud.uploadFile({
-      cloudPath: `qrcode/${id}`,
-      fileContent: buffer,
-    })
-    return fileID
+    // const cloudPath = `qrcode/${scene}`
+    // return await cloud.uploadFile({ cloudPath, fileContent })
+    return fileContent
   } catch (err) {
     return err
   }

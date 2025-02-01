@@ -8,5 +8,5 @@
     <text>房间</text>
   </button>
   <button wx:if="{{!scene}}" class="button-secondary" hover-class="button-secondary-hover" bind:tap="onHistoryOpen">历史记录</button>
-  <image class="logo" src="/assets/logo.png" mode="aspectFit" />
+  <!-- <image class="logo" src="/assets/logo.png" mode="aspectFit" /> -->
 </view>

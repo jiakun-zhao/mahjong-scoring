@@ -1,2 +1,26 @@
-<!--pages/scoring/scoring.wxml-->
-<text>pages/scoring/scoring.wxml</text>
+<button class="button-primary" hover-class="button-primary-hover">计分</button>
+<button class="button-secondary" hover-class="button-secondary-hover">结算</button>
+
+<input type="number"/>
+<!-- <view class="input">
+  <view class="info">
+    <image class="avatar" src="https://img2.woyaogexing.com/2024/07/31/e7008b2690b277c895420f3989736caf.png" mode="aspectFill" />
+    <view class="flag">赢</view>
+    <view class="value font-mono">10</view>
+    <view>分</view>
+  </view>
+  <view class="keyboard font-mono">
+    <button class="button-secondary" hover-class="button-secondary-hover">1</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">2</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">3</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">4</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">5</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">6</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">7</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">8</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">9</button>
+    <button class="button-primary" hover-class="button-primary-hover">输/赢</button>
+    <button class="button-secondary" hover-class="button-secondary-hover">0</button>
+    <button class="button-primary" hover-class="button-primary-hover">确认</button>
+  </view>
+</view> -->

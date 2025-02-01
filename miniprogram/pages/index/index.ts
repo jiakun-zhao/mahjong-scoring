@@ -1,17 +1,18 @@
+import { uploadAvatar } from '~/utils/cloud'
 import { getOpenid } from '~/utils/openid'
 
 Page({
   data: {
+    scene: null,
     avatarUrl: '',
     isAvatarLoaded: false,
-    scene: null,
   },
   async onLoad(query) {
     const openid = await getOpenid()
     this.setData({
       // @ts-expect-error
       scene: query.scene,
-      avatarUrl: `cloud://cloud-dev-2g6a41d99ffcb37a.636c-cloud-dev-2g6a41d99ffcb37a-1329167428/avatar/${openid}`,
+      avatarUrl: `https://blob.zhaojiakun.com/program/mahjong-scoring/avatar-${openid}`,
     })
     wx.showLoading({ title: '加载中', mask: true })
   },
@@ -30,17 +31,17 @@ Page({
   async onAvatarChoose(e: WechatMiniprogram.CustomEvent<{ avatarUrl: string }>) {
     try {
       wx.showLoading({ title: '上传头像中' })
-      const openid = await getOpenid()
       const filePath = e.detail.avatarUrl
-      await wx.cloud.uploadFile({ cloudPath: `avatar/${openid}`, filePath })
+      await uploadAvatar(filePath)
       this.setData({ avatarUrl: filePath, isAvatarLoaded: true })
     } catch {
       this.setData({ isAvatarLoaded: false })
+    } finally {
+      wx.hideLoading()
+      this.data.isAvatarLoaded
+        ? wx.showToast({ title: '上传成功', icon: 'success' })
+        : wx.showToast({ title: '上传失败', icon: 'error' })
     }
-    wx.hideLoading()
-    this.data.isAvatarLoaded
-      ? wx.showToast({ title: '上传成功', icon: 'success' })
-      : wx.showToast({ title: '上传失败', icon: 'error' })
   },
   async onAvatarLoaded() {
     wx.hideLoading()

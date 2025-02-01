@@ -3,11 +3,8 @@ export async function getOpenid() {
   const openid = app.globalData.openid
     || (app.globalData.openid = await getOpenidFromStorage())
     || (app.globalData.openid = await getOpenidFromCloud())
-
-  if (!openid) {
+  if (!openid)
     wx.exitMiniProgram()
-  }
-
   return openid as string
 }
 
